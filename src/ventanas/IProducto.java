@@ -264,6 +264,7 @@ public class IProducto extends javax.swing.JInternalFrame {
             public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
             }
         });
+        getContentPane().setLayout(new java.awt.BorderLayout());
 
         pnlContenedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondoazulceleste.jpg"))); // NOI18N
         pnlContenedor.setLayout(new javax.swing.BoxLayout(pnlContenedor, javax.swing.BoxLayout.PAGE_AXIS));
@@ -340,6 +341,11 @@ public class IProducto extends javax.swing.JInternalFrame {
         txtCodigo.setEditable(false);
         txtCodigo.setName("code"); // NOI18N
         txtCodigo.setPreferredSize(new java.awt.Dimension(180, 26));
+        txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCodigoKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(3, 0, 0, 176);
         pnlCodes.add(txtCodigo, gridBagConstraints);
@@ -347,6 +353,11 @@ public class IProducto extends javax.swing.JInternalFrame {
         txtCodigoBarras.setEditable(false);
         txtCodigoBarras.setName("codebar"); // NOI18N
         txtCodigoBarras.setPreferredSize(new java.awt.Dimension(180, 26));
+        txtCodigoBarras.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCodigoBarrasKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -421,6 +432,11 @@ public class IProducto extends javax.swing.JInternalFrame {
 
         txtCodeFabricante.setEditable(false);
         txtCodeFabricante.setPreferredSize(new java.awt.Dimension(180, 26));
+        txtCodeFabricante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCodeFabricanteKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -510,7 +526,7 @@ public class IProducto extends javax.swing.JInternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(3, 0, 0, 5);
         pnlDetalles.add(ftxtPeso, gridBagConstraints);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FOTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FOTO", 2, 0, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
         jPanel4.setOpaque(false);
         jPanel4.setPreferredSize(new java.awt.Dimension(300, 350));
         jPanel4.setLayout(new java.awt.BorderLayout());
@@ -543,7 +559,7 @@ public class IProducto extends javax.swing.JInternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
         pnlDetalles.add(jPanel4, gridBagConstraints);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Producto", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Producto", 2, 0, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
         jPanel5.setOpaque(false);
         jPanel5.setPreferredSize(new java.awt.Dimension(200, 130));
         jPanel5.setLayout(new java.awt.GridLayout(3, 1));
@@ -650,6 +666,11 @@ public class IProducto extends javax.swing.JInternalFrame {
         ftxtUtilidad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ftxtUtilidad.setName("utilidad"); // NOI18N
         ftxtUtilidad.setPreferredSize(new java.awt.Dimension(80, 23));
+        ftxtUtilidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ftxtUtilidadKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -691,6 +712,11 @@ public class IProducto extends javax.swing.JInternalFrame {
         jFormattedTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jFormattedTextField1.setName("igv"); // NOI18N
         jFormattedTextField1.setPreferredSize(new java.awt.Dimension(50, 23));
+        jFormattedTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jFormattedTextField1KeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
@@ -734,6 +760,11 @@ public class IProducto extends javax.swing.JInternalFrame {
         ftxtCosto.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ftxtCosto.setName("costo"); // NOI18N
         ftxtCosto.setPreferredSize(new java.awt.Dimension(80, 23));
+        ftxtCosto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ftxtCostoKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -1082,6 +1113,30 @@ public class IProducto extends javax.swing.JInternalFrame {
            this.inicializarProducto(pvc.getProducto());
        }
     }//GEN-LAST:event_bntBuscarActionPerformed
+
+    private void txtCodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyPressed
+        // Falata validar 
+    }//GEN-LAST:event_txtCodigoKeyPressed
+
+    private void txtCodigoBarrasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoBarrasKeyPressed
+         // Falata validar
+    }//GEN-LAST:event_txtCodigoBarrasKeyPressed
+
+    private void txtCodeFabricanteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodeFabricanteKeyPressed
+        // Falata validar:
+    }//GEN-LAST:event_txtCodeFabricanteKeyPressed
+
+    private void ftxtUtilidadKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ftxtUtilidadKeyPressed
+        // Falata validar:
+    }//GEN-LAST:event_ftxtUtilidadKeyPressed
+
+    private void jFormattedTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jFormattedTextField1KeyPressed
+        // Falata validar:
+    }//GEN-LAST:event_jFormattedTextField1KeyPressed
+
+    private void ftxtCostoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ftxtCostoKeyPressed
+        // Falata validar:
+    }//GEN-LAST:event_ftxtCostoKeyPressed
 
     
     private void getMostrarUltimoProductos()

@@ -513,6 +513,7 @@ public class ICompra extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("Compra");
         setToolTipText("");
+        getContentPane().setLayout(new java.awt.BorderLayout());
 
         panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondoazulceleste.jpg"))); // NOI18N
         panelImage1.setLayout(new javax.swing.BoxLayout(panelImage1, javax.swing.BoxLayout.PAGE_AXIS));
@@ -569,6 +570,11 @@ public class ICompra extends javax.swing.JInternalFrame {
 
         txtNumeroDocumento.setEditable(false);
         txtNumeroDocumento.setPreferredSize(new java.awt.Dimension(120, 22));
+        txtNumeroDocumento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNumeroDocumentoKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
@@ -597,6 +603,11 @@ public class ICompra extends javax.swing.JInternalFrame {
         ftfCambio.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         ftfCambio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ftfCambio.setPreferredSize(new java.awt.Dimension(80, 22));
+        ftfCambio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ftfCambioKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
         gridBagConstraints.gridy = 0;
@@ -696,6 +707,11 @@ public class ICompra extends javax.swing.JInternalFrame {
         txtUsuario.setEditable(false);
         txtUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/user_blue_32.png"))); // NOI18N
         txtUsuario.setPreferredSize(new java.awt.Dimension(210, 22));
+        txtUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtUsuarioKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -900,7 +916,7 @@ public class ICompra extends javax.swing.JInternalFrame {
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalles"));
         jPanel12.setPreferredSize(new java.awt.Dimension(80, 88));
-        jPanel12.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        jPanel12.setLayout(new java.awt.FlowLayout(0));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Items:");
@@ -1475,6 +1491,18 @@ public class ICompra extends javax.swing.JInternalFrame {
     private void bntCalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalculadoraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bntCalculadoraActionPerformed
+
+    private void txtNumeroDocumentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroDocumentoKeyPressed
+        //falta validar 
+    }//GEN-LAST:event_txtNumeroDocumentoKeyPressed
+
+    private void ftfCambioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ftfCambioKeyPressed
+        //falta validar
+    }//GEN-LAST:event_ftfCambioKeyPressed
+
+    private void txtUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtUsuarioKeyPressed
 
     private void setProveedor(Proveedor proveedor)
     {

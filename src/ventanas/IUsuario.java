@@ -175,6 +175,7 @@ public class IUsuario extends javax.swing.JInternalFrame {
             public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
             }
         });
+        getContentPane().setLayout(new java.awt.BorderLayout());
 
         panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondoazulceleste.jpg"))); // NOI18N
         panelImage1.setLayout(new javax.swing.BoxLayout(panelImage1, javax.swing.BoxLayout.PAGE_AXIS));
@@ -237,7 +238,7 @@ public class IUsuario extends javax.swing.JInternalFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(666, 563));
         jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.PAGE_AXIS));
 
-        pnlCmpObligatorios.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Obligatorios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        pnlCmpObligatorios.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Obligatorios", 0, 0, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
         pnlCmpObligatorios.setOpaque(false);
         pnlCmpObligatorios.setLayout(new java.awt.GridBagLayout());
 
@@ -297,6 +298,11 @@ public class IUsuario extends javax.swing.JInternalFrame {
         txtDni.setDescripcion("Obligatorio");
         txtDni.setName("tdni"); // NOI18N
         txtDni.setPreferredSize(new java.awt.Dimension(120, 26));
+        txtDni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtDniKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -308,6 +314,11 @@ public class IUsuario extends javax.swing.JInternalFrame {
         txtCodigo.setDescripcion("Obligatorio");
         txtCodigo.setName("tcod"); // NOI18N
         txtCodigo.setPreferredSize(new java.awt.Dimension(120, 26));
+        txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCodigoKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
@@ -331,6 +342,11 @@ public class IUsuario extends javax.swing.JInternalFrame {
         txtNombre.setDescripcion("Obligatorio");
         txtNombre.setName("tnom"); // NOI18N
         txtNombre.setPreferredSize(new java.awt.Dimension(325, 26));
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNombreKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -343,6 +359,11 @@ public class IUsuario extends javax.swing.JInternalFrame {
         txtApellidos.setDescripcion("Obligatorio");
         txtApellidos.setName("tape"); // NOI18N
         txtApellidos.setPreferredSize(new java.awt.Dimension(325, 26));
+        txtApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtApellidosKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -442,7 +463,7 @@ public class IUsuario extends javax.swing.JInternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 1, 3);
         pnlCmpObligatorios.add(dcFechaRegistro, gridBagConstraints);
 
-        pnlFoto.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), null, new java.awt.Color(0, 0, 0)), "Foto", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        pnlFoto.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(0, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), null, new java.awt.Color(0, 0, 0)), "Foto", 2, 0, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         pnlFoto.setToolTipText("Click Para cambiar de Imagen");
         pnlFoto.setEnabled(false);
         pnlFoto.setOpaque(false);
@@ -521,7 +542,7 @@ public class IUsuario extends javax.swing.JInternalFrame {
 
         jPanel3.add(pnlCmpObligatorios);
 
-        pnlOpcional.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Opcionales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        pnlOpcional.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Opcionales", 0, 0, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
         pnlOpcional.setOpaque(false);
         pnlOpcional.setLayout(new java.awt.GridBagLayout());
 
@@ -606,6 +627,11 @@ public class IUsuario extends javax.swing.JInternalFrame {
 
         txtNextel.setEditable(false);
         txtNextel.setPreferredSize(new java.awt.Dimension(150, 26));
+        txtNextel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNextelKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 1;
@@ -1064,6 +1090,26 @@ private void bntBitacoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
  }
     
 }//GEN-LAST:event_bntBitacoraActionPerformed
+
+    private void txtDniKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDniKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtDniKeyPressed
+
+    private void txtNombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtNombreKeyPressed
+
+    private void txtApellidosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtApellidosKeyPressed
+
+    private void txtCodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtCodigoKeyPressed
+
+    private void txtNextelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNextelKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtNextelKeyPressed
 
 private void asignarAlmacen(Usuario user)
 {

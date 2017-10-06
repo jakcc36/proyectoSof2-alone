@@ -200,11 +200,12 @@ public class IProveedores extends javax.swing.JInternalFrame {
             public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
             }
         });
+        getContentPane().setLayout(new java.awt.BorderLayout());
 
         panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fondoazulceleste.jpg"))); // NOI18N
         panelImage1.setLayout(new javax.swing.BoxLayout(panelImage1, javax.swing.BoxLayout.PAGE_AXIS));
 
-        pnlEntradas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos del Proveedor", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        pnlEntradas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos del Proveedor", 1, 0, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         pnlEntradas.setOpaque(false);
         pnlEntradas.setLayout(new java.awt.GridBagLayout());
 
@@ -370,6 +371,11 @@ public class IProveedores extends javax.swing.JInternalFrame {
         txtTelf.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         txtTelf.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtTelf.setPreferredSize(new java.awt.Dimension(120, 25));
+        txtTelf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtTelfKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 2;
@@ -392,6 +398,11 @@ public class IProveedores extends javax.swing.JInternalFrame {
         txtMovil.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         txtMovil.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtMovil.setPreferredSize(new java.awt.Dimension(120, 25));
+        txtMovil.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtMovilKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
         gridBagConstraints.gridy = 2;
@@ -975,6 +986,14 @@ public class IProveedores extends javax.swing.JInternalFrame {
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
         cerrarVentana();
     }//GEN-LAST:event_formInternalFrameClosing
+
+    private void txtTelfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelfKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtTelfKeyPressed
+
+    private void txtMovilKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovilKeyPressed
+        //falta validar
+    }//GEN-LAST:event_txtMovilKeyPressed
 
     private void cerrarVentana()
     {
