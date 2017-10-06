@@ -1104,7 +1104,7 @@ private void bntBitacoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     }//GEN-LAST:event_txtApellidosKeyPressed
 
     private void txtCodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyPressed
-        //falta validarddd
+        //falta validar
     }//GEN-LAST:event_txtCodigoKeyPressed
 
     private void txtNextelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNextelKeyPressed
